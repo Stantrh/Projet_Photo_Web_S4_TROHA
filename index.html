@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index td8 : fetch</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="module" src='js/index.js' defer></script>
+</head>
+<body>
+
+<main id="photo">
+
+<!-- Ici la section qui contient la galerie avec la collection d'images et les boutons    -->
+    <section>
+        <button id="loadGalleryBtn">Charger la Galerie</button>
+        <div id="navigation">
+            <button id="firstBtn">First</button>
+            <button id="prevBtn">Prev</button>
+            <button id="nextBtn">Next</button>
+            <button id="lastBtn">Last</button>
+        </div>
+        <div id="gallery">
+            <!--    Et ici on mettra la template handlebars de la gallerie-->
+        </div>
+
+    </section>
+
+
+<!--    Ici la section où on affiche la photo individuelle qui a été cliquée-->
+    <section id="la_photo">
+
+    </section>
+
+<!--    Ici la section qui apparaît quand on clique sur une image de la gallerie-->
+    <div id="lightbox" class="lightbox">
+        <button id="closeLightboxBtn">×</button>
+        <button id="prevLightboxBtn" class="lightbox-nav">←</button>
+        <button id="nextLightboxBtn" class="lightbox-nav">→</button>
+        <img id="lightboxImg" src="" alt="">
+    </div>
+
+</main>
+
+<!--Script pour la photo qui s'affiche individuellement (photo sur laquelle on a cliqué) -->
+<script id="photoTemplate" type="text/x-handlebars-template">
+    <h1>Photo : {{photo.id}}</h1>
+    <img src="{{photo.url.href}}">
+    <h4>{{photo.titre}}</h4>
+    <p>{{photo.descr}}</p>
+    <p>{{photo.type}}, {{photo.width}}x{{photo.height}}</p>
+    <h4 id="la_categorie">categorie : </h4>
+    <h4>commentaires : </h4>
+    <ul id="les_commentaires">
+    </ul>
+</script>
+
+<!--Script pour afficher les images de la gallerie-->
+<script id="galleryTemplate" type="text/x-handlebars-template">
+    <div id="containerPhotos" class="grid-container">
+        {{#each photos}}
+            <div class="grid-item thumbnail">
+                <img data-photoId="{{this.photo.id}}" src="{{this.photo.thumbnail.href}}" alt="{{this.photo.titre}}">
+            </div>
+        {{/each}}
+    </div>
+</script>
+
+<footer>
+    <p>TROHA Stanislas S4 RA-IL 1</p>
+</footer>
+<script src="https://unpkg.com/babel-standalone@6/babel.min. js"></script>
+</body>
+</html>
