@@ -17,7 +17,7 @@
 ### Installation
 1. **Cloner le dépôt**
     ```bash
-    git clone https://github.com/votre-utilisateur/votre-projet.git
+    git clone https://github.com/Stantrh/Projet_Photo_Web_S4_TROHA.git
     cd votre-projet
     ```
 
