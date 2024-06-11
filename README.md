@@ -18,7 +18,7 @@
 1. **Cloner le dépôt**
     ```bash
     git clone https://github.com/Stantrh/Projet_Photo_Web_S4_TROHA.git
-    cd votre-projet
+    cd Projet_Photo_Web_S4_TROHA
     ```
 
 2. **Installer les dépendances**
